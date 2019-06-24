@@ -16,3 +16,4 @@ static inline void simple_lmk_mm_freed(struct mm_struct *mm)
 #endif
 
 #endif /* _SIMPLE_LMK_H_ */
+
