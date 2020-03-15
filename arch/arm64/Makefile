@@ -81,6 +81,10 @@ ifeq ($(CONFIG_COMPAT_VDSO), y)
     export CONFIG_VDSO32 := y
     vdso32 := -DCONFIG_VDSO32=1
   endif
+KBUILD_CFLAGS	+= -mgeneral-regs-only
+ifeq ($(CONFIG_ARCH_MSM8953), y)
+KBUILD_CFLAGS	+= -mcpu=cortex-a53
+endif
 endif
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only $(lseinstr) $(vdso32)
