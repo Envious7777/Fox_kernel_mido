@@ -8046,7 +8046,7 @@ static int fg_common_hw_init(struct fg_chip *chip)
 #ifdef CONFIG_MACH_XIAOMI_C6
 			1,
 #else
-			soc_to_setpoint(settings[FG_MEM_DELTA_SOC].value),
+			settings[FG_MEM_DELTA_SOC].value == 1 ? 1 : soc_to_setpoint(settings[FG_MEM_DELTA_SOC].value),
 #endif
 			settings[FG_MEM_DELTA_SOC].offset);
 	if (rc) {
