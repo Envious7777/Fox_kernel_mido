@@ -45,6 +45,13 @@
 	};
 };
 
+&pm8937_vadc {
+	/delete-node/ chan@11;
+};
+
+&thermal_zones {
+	/delete-node/ pa-therm1-adc;
+};
 &spmi_bus {
 	qcom,pm8953@0 {
 		qcom,power-on@800 {
