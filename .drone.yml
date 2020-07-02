@@ -3,12 +3,12 @@ type: docker
 name: FoxPipeline
 
 steps:
-- name: Milky Way
+- name: Project FoxKernel
   image: starlight2834/ci_docker:latest
   environment:
-    Apibot:
-      from_secret: Apibot
-    Chatid:
-      from_secret: Chatid
+    BOT_API_KEY:
+      from_secret: BOT_API
+    ID:
+      from_secret: ID
   commands:
-  - "curl https://raw.githubusercontent.com/Fox-kernel/myscripts/master/mido_WIP.sh | bash"
+  - "curl https://raw.githubusercontent.com/Fox-kernel/myscripts/master/mido_Weekly.sh | bash"
