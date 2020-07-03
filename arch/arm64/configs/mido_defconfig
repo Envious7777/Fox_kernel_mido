@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Project-FoxKernel"
+CONFIG_LOCALVERSION="-ProjectEva-FoxKernel"
 # CONFIG_LOCALVERSION_AUTO is not set
 # CONFIG_FHANDLE is not set
 CONFIG_AUDIT=y
