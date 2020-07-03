@@ -1,0 +1,20 @@
+jobs:
+  compile:
+   docker:
+      - image: ubuntu:18.04
+   steps:
+      - run:
+          command: |
+           apt-get -y update && apt-get -y upgrade && apt-get -y install bc build-essential zip wget git gcc clang python libc6 curl libstdc++6 git wget libssl-dev zstd && apt-get -y install bison && apt-get -y install flex 
+           git config --global user.name "shashank1436"
+           git config --global user.email "9945shashank@gmail.com"
+           git config --global color.ui false
+           git clone --depth=1 -b mido-new --single-branch https://github.com/Fox-kernel/Fox_kernel_mido mido
+           cd mido
+           wget https://raw.githubusercontent.com/Fox-kernel/myscripts/master/mido_WIP.sh
+           source mido_WIP.sh 
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
