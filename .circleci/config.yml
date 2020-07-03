@@ -10,10 +10,10 @@ jobs:
            git config --global user.name "shashank1436"
            git config --global user.email "9945shashank@gmail.com"
            git config --global color.ui false
-           git clone --depth=1 --single-branch https://github.com/shashank1436/Fox_kernel_mido
+           git clone --depth=1 -b mido-new --single-branch https://github.com/shashank1436/Fox_kernel_mido
            cd mido
            wget https://raw.githubusercontent.com/Fox-kernel/myscripts/master/mido_WIP.sh
-           source mido_WIP
+           source mido_WIP.sh
 workflows:
   version: 2.1
   cooking:
